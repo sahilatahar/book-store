@@ -1,0 +1,66 @@
+.Book {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem auto;
+
+  @media screen and (max-width: 500px) {
+    width: min(90%, 300px);
+  }
+
+  &__image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__desc {
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  &__buttons {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+
+    button {
+      width: 100%;
+      padding: 0.5rem;
+      border: 0;
+      border-radius: 0.5rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+
+      &.update__button {
+        background-color: #f0ad4e;
+        border-color: #f0ad4e;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+      &.delete__button {
+        background-color: #d9534f;
+        border-color: #d9534f;
+        color: #fff;
+      }
+    }
+  }
+}
