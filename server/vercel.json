@@ -20,11 +20,5 @@
                 "Access-Control-Allow-Origin": "https://sahilatahar-book-store.vercel.app"
             }
         }
-    ],
-    "rewrites": [
-        {
-            "source": "/(.*)",
-            "destination": "/"
-        }
     ]
 }
