@@ -20,6 +20,10 @@ app.use(cors(
 
 connectDB();
 
+app.use("/", (req, res) => {
+    res.send("Hello, Server is running")
+});
+
 app.use("/books", booksRouter);
 
 mongoose.connection.once("open", () => {
