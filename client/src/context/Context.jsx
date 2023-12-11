@@ -10,7 +10,7 @@ export const ContextProvider = ({ children }) => {
 
     const [books, setBooks] = useState([]);
 
-    axios.defaults.withCredentials = true;
+    // axios.defaults.withCredentials = true;
 
     useEffect(() => {
         const fetchAllBooks = async () => {
