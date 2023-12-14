@@ -6,19 +6,25 @@
             "use": "@vercel/node"
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/(.*)",
-            "dest": "./",
-            "methods": [
-                "GET",
-                "POST",
-                "PUT",
-                "DELETE"
-            ],
-            "headers": {
-                "Access-Control-Allow-Origin": "https://sahilatahar-book-store.vercel.app"
-            }
+            "source": "/books",
+            "destination": "/index.js"
+        },
+        {
+            "source": "/(.*)",
+            "destination": "/index.js"
+        }
+    ],
+    "headers": [
+        {
+            "source": "/(.*)",
+            "headers": [
+                {
+                    "key": "Access-Control-Allow-Origin",
+                    "value": "https://sahilatahar-book-store.vercel.app"
+                }
+            ]
         }
     ]
 }
